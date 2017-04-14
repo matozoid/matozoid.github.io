@@ -16,7 +16,7 @@ It should parse all possible Java files,
 but it also parses a lot of faulty Java files.
 There are a few reasons for this:
 - it simplifies the grammar. Rules can be reused (check out the `Modifiers()` rule which is used *everywhere*)
-- it makes error recovery less urgent. The parser happily continues with some types of syntax errors.
+- it makes error recovery inside the grammar less urgent. The parser happily continues with some types of syntax errors.
 - it makes versioning possible without having multiple grammars. The parser parses any version of Java.
 - it makes the parser faster. We need less rules, we do less backtracking, etc.
 
@@ -47,11 +47,13 @@ The whole idea is that JavaParser,
 after doing the parsing work,
 passes the resulting node to a validator.
 This validator inspects the node (and/or its children) in some way and reports any trouble with the `problemReporter`.
+
 Some validators are composed of other validators - `Java8Validator` is a pretty complex thing,
 and some are very simple - `Java1_0Validator.noModules` simply checks if any node in the AST is a `ModuleDeclaration`.
 
 As a user, you can make custom validators, anything really,
 as long as it is implements that `accept` method.
+Validators that modify the AST are frowned upon.
   
 The validators that JavaParser runs are configured in `ParserConfiguration.validator`.
 Since it can only be a single validator,
