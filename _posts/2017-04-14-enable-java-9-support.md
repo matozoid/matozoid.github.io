@@ -16,7 +16,8 @@ In `ParserConfiguration`.
 
 ```java
 Java9Validator java9Validator = new Java9Validator();
-ParserConfiguration parserConfiguration = new ParserConfiguration().setValidator(java9Validator);
+ParserConfiguration parserConfiguration = new ParserConfiguration();
+parserConfiguration.setValidator(java9Validator);
 JavaParser javaParser = new JavaParser(parserConfiguration);
 ```
 
