@@ -1,1 +1,0 @@
-# Notes on [JavaParser](http://javaparser.org/)
