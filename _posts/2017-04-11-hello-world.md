@@ -2,7 +2,6 @@
 layout: post
 title:  "Opening up"
 date:   2017-11-17 16:16:01 +0100
-categories: javaparser
 ---
 Hi, it's me!
 The maintainer of [JavaParser](http://javaparser.org/) :-)

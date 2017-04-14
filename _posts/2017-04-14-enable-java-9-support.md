@@ -2,7 +2,7 @@
 layout: post
 title:  "Enabling Java 9 support"
 date:   2017-11-17 16:16:01 +0100
-categories: javaparser
+category: javaparser
 ---
 When support for parsing Java 9 files was added in version 3.1.4,
 we didn't turn it on by default.

@@ -2,7 +2,7 @@
 layout: post
 title:  "Semantic validations in JavaParser"
 date:   2017-11-17 16:16:01 +0100
-categories: javaparser
+category: javaparser
 ---
 As I was learning how JavaParser worked by fixing bugs and doing small changes,
 I kept noticing comments in the grammar file saying "this should be checked semantically."
