@@ -4,6 +4,8 @@ baseurl: ""
 url: "https://matozoid.github.io"
 twitter_username: matozoid
 github_username:  matozoid
+disqus:
+    shortname: javaparser-notes
 
 # Build settings
 markdown: kramdown

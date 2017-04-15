@@ -2,6 +2,7 @@
 layout: post
 title:  "Semantic validations in JavaParser"
 date:   2017-11-17 16:16:01 +0100
+comments: true
 tags: javaparser
 ---
 As I was learning how JavaParser worked by fixing bugs and doing small changes,
