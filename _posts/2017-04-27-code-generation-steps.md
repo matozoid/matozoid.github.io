@@ -2,6 +2,7 @@
 layout: post
 title:  Code generation and Maven in JavaParser
 date:   2017-04-27 16:16:01 +0100
+comments: true
 tags: javaparser
 ---
 Since version 3.1.0 I made a start on generating the repetitive parts of the JavaParser code,
