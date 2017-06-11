@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Parse error recovery
-date:   2017-05-06 16:16:01 +0100
+date:   2017-06-11 16:16:01 +0100
 comments: true
 tags: javaparser
 ---
