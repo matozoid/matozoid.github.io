@@ -5,6 +5,18 @@ date:   2017-04-27 16:16:01 +0100
 comments: true
 tags: javaparser
 ---
+
+What's below is outdated starting from version 3.2.9.
+Currently the build does not include any code generation phases anymore.
+They can be run manually with two scripts,
+one to generate the metamodel,
+and one to run the core generators.
+Sadly this will mean that we will have to run these by hand for every PR,
+but it sure is a lot clearer!
+
+Outdated
+---
+
 Since version 3.1.0 I made a start on generating the repetitive parts of the JavaParser code,
 of which there are many.
 
