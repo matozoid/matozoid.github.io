@@ -63,4 +63,4 @@ public class Fix {
 }
 ```
 
-[Here is the complete project](https://github.com/matozoid/java-logic-positivizer) which also removes useless casts of `this`.
+[This project is now an offical sample project!](https://github.com/javaparser/javaparser-maven-sample)
