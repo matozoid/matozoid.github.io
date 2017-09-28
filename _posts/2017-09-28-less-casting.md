@@ -33,16 +33,22 @@ if (condExpr.isBinaryExpr()) {
 }
 ``` 
 
-This is already much more pleasing to the eye,
-but I thought we could use Java 8 to improve it even more:
+Not only is this much more pleasing to the eye,
+your IDE will suggest these methods for you,
+so you can pick the correct sub-node without having to go through the class hierarchy.
+
+I thought we could use Java 8 to improve it even more:
 
 ```java
-Expression condExpr = ifStmt.getCondition();
-condExpr.ifBinaryExpr(cond ->
+ifStmt.getCondition().ifBinaryExpr(cond ->
     // Now we can use cond...
 );
 ```
 
 `cond` has the correct type and is ready to be used right away :-)
+
+These methods are available at most nodes.
+I did not implement them on `Node` or other very wide types because the amount of methods would explode,
+and that would not be helpful to anyone. (`statement.isExpression()`?!)
 
 Have fun cleaning up your code!
