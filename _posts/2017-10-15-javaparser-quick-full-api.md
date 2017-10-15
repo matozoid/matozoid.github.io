@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  The quick and the full API of JavaParser
-date:   2017-10-08 16:16:01 +0100
+date:   2017-10-15 16:16:01 +0100
 comments: true
 tags: javaparser
 ---
