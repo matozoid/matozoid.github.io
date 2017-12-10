@@ -52,3 +52,22 @@ I did not implement them on `Node` or other very wide types because the amount o
 and that would not be helpful to anyone. (`statement.isExpression()`?!)
 
 Have fun cleaning up your code!
+
+## Addendum :-)
+
+From 3.5.6 on, there are "to" methods that return an Optional,
+so now you can do this kind of trickery:
+
+```java
+// If the condition is a binary expression, get the operator. Otherwise it's empty.
+Optional<BinaryExpr.Operator> operator = ifStmt.getCondition().toBinaryExpr().map(BinaryExpr::getOperator);
+
+// Same thing, but we throw a disappointed exception when there is no binary expr in the condition:
+BinaryExpr.Operator operator = ifStmt
+        .getCondition()
+        .toBinaryExpr()
+        .map(BinaryExpr::getOperator)
+        .orElseThrow(() -> new RuntimeException("Oh, I was expecting a BinaryExpr here..."));
+```
+
+This will help you get rid of `.get()`'s everywhere.
