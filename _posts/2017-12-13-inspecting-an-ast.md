@@ -76,7 +76,7 @@ Finally an extra cool one - it outputs the AST as a dot file which can be visual
 // Now comes the inspection code:
 DotPrinter printer = new DotPrinter(true);
 try (FileWriter fileWriter = new FileWriter("ast.dot");
-     PrintWriter printWriter = new PrintWriter(fileWriter)) {
+    PrintWriter printWriter = new PrintWriter(fileWriter)) {
     printWriter.print(printer.output(cu));
 }
 ```
