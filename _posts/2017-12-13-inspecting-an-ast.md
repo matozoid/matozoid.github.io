@@ -55,6 +55,32 @@ YamlPrinter printer = new YamlPrinter(true);
 System.out.println(printer.output(cu));
 ```
 
+Here's the output.
+You can see property names (`isInterface`, `identifier`, ...)
+node types (`Type=CompilationUnit`) and values (`"false"`, `"x"`).
+You can see how a type has members,
+how `int x;` is one of those members,
+that it has type `FieldDeclaration`
+and can contain multiple variables,
+but there is only one now: `"x"`.
+```yaml
+root(Type=CompilationUnit): 
+    types: 
+        - type(Type=ClassOrInterfaceDeclaration): 
+            isInterface: "false"
+            name(Type=SimpleName): 
+                identifier: "X"
+            members: 
+                - member(Type=FieldDeclaration): 
+                    variables: 
+                        - variable(Type=VariableDeclarator): 
+                            name(Type=SimpleName): 
+                                identifier: "x"
+                            type(Type=PrimitiveType): 
+                                type: "INT"
+```
+
+
 If you like looking at JSON, try
 ```java
 // Now comes the inspection code:
