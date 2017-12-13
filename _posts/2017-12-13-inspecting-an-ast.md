@@ -34,17 +34,17 @@ public class Inspect {
 }
 ```
 
-#### Option 1: your IDE's debugger
+### Option 1: your IDE's debugger
 
 You'll need to figure out how your IDE works to get this to work.
 
 Put a breakpoint on `System.out.println(cu);` and run the program in debug mode.
-When it stop at the breakpoint,
+When it stops at the breakpoint,
 you should be able to see the known variables.
 Look for `cu` and you can click it open,
 and now you can inspect the whole generated AST.
 
-#### Option 2: use one the structure printers
+### Option 2: use one the structure printers
 
 There are a few printers that will output the structure of the AST with only one purpose: for you to look at.
 
