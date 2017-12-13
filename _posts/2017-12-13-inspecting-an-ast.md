@@ -85,5 +85,4 @@ I've sent the output to Graphiz this way:
 dot -Tpng ast.dot >ast.png
 ```
 
-and got this:
 ![an AST]({{ "/assets/ast.png" | absolute_url }})
