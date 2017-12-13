@@ -46,7 +46,7 @@ and now you can inspect the whole generated AST.
 
 ### Option 2: use one the structure printers
 
-There are a few printers that will output the structure of the AST with only one purpose: for you to look at.
+Thanks to [Ryan Beckett](https://www.linkedin.com/in/ryanbeckett/) there are a few printers that will output the structure of the AST with only one purpose: for you to look at.
 
 My favourite one outputs Yaml:
 ```java
@@ -79,7 +79,6 @@ root(Type=CompilationUnit):
                             type(Type=PrimitiveType): 
                                 type: "INT"
 ```
-
 
 If you like looking at JSON, try
 ```java
