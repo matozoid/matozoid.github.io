@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "JavaParser's logging framework in one file"
-date:   2018-01-19 16:16:01 +0100
+date:   2018-02-19 16:16:01 +0100
 tags: javaparser
 ---
 ## JavaParser's logging framework in one file
