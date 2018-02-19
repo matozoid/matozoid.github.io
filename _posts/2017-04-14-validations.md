@@ -13,7 +13,7 @@ When the quarter finally dropped,
 it caused a bunch of new ideas.
 
 What it means is that we don't want the grammar to specify the exact Java grammar.
-It should parse all possible Java files,
+It parses all possible Java files,
 but it also parses a lot of faulty Java files.
 There are a few reasons for this:
 - it simplifies the grammar. Rules can be reused (check out the `Modifiers()` rule which is used *everywhere*)
@@ -55,6 +55,10 @@ and some are very simple - `Java1_0Validator.noModules` simply checks if any nod
 As a user, you can make custom validators, anything really,
 as long as it is implements that `accept` method.
 Validators that modify the AST are frowned upon.
+
+(IMPORTANT: from 3.5.14 on the following is no longer valid. You can now set postprocessors instead of validators.
+You can turn a validator into a postprocessor by calling its `postprocessor()` method.
+Validators for a language level are now set by calling `ParserConfiguration.setLanguageLevel`.)
   
 The validators that JavaParser runs are configured in `ParserConfiguration.validator`.
 Since it can only be a single validator,
