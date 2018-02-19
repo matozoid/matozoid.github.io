@@ -10,6 +10,35 @@ we didn't turn it on by default.
 We set the default language level to 8,
 with the idea to set it to 9 around the time JDK 9 comes out.
 
+We needed to do some refactoring for Java 10 support,
+so you'll find the old way below under "pre 3.5.14"
+
+What you want to do nowadays is to pick a postprocessor that
+turns the AST into an AST for the Java version you want,
+and a validator that will find problems in the AST for you.
+Luckily, that's all hidden behind a simple setting in `ParserConfiguration`:
+
+```java
+JavaParser.getStaticConfiguration().setLanguageLevel(ParserConfiguration.LanguageLevel.JAVA_9);
+```
+
+Okay... Let's do an import static:
+
+```java
+import static com.github.javaparser.ParserConfiguration.LanguageLevel.*;
+
+JavaParser.getStaticConfiguration().setLanguageLevel(JAVA_9);
+```
+
+Well, that was quick.
+
+There are some pseudo-language levels available (from 3.5.15 on):
+- POPULAR gives you the most common Java version at the time of release.
+- LATEST gives you the latest stuff that JavaParser supports.
+- RAW skips postprocessing and validation for a bit of a speed boost.
+
+# Pre 3.5.14 (old stuff)
+
 So how do you get that delicious module support?
 By changing the validations done to the AST.
 Where are these validations set?
